@@ -1,5 +1,5 @@
 INSERT INTO contact_info (first_name, last_name, email, phone_number) 
- VALUES ('Rosanna', 'Guiles', RosGui11@gmail.com, (682) 515-8888));
+ VALUES ('Rosanna', 'Guiles', RosGui11@gmail.com, (682) 515-8888);
 
 INSERT INTO contact_info (first_name, last_name, email, phone_number) 
  VALUES ('Harry', 'Potter', Hogwarts231@gmail.com, (682) 233-7749);
