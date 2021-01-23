@@ -33,17 +33,40 @@
         </div>
         <div class="row justify-content-center">
             <div class="card text-center" style="width: 18rem;">
-                <img class="card-img-top" src="https://www.history.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTU3ODc4NjAzNTM2MTQ4MTkx/hith-eiffel-tower-istock_000016468972large-2.jpg" alt="Card image cap">
+                <img class="card-img-top"
+                    src="https://www.history.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTU3ODc4NjAzNTM2MTQ4MTkx/hith-eiffel-tower-istock_000016468972large-2.jpg"
+                    alt="Card image cap">
                 <div class="card-body">
-                  <h5 class="card-title">[name of attraction]</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h5 class="card-title">[name of attraction]</h5>
+                    <p class="card-text">[fill in description]</p>
+                    <p class="card-text">Dates: [00/00/00 - 00/00/00]</p>
+                    <a href="#" class="btn btn-primary">Update Dates</a>
+                    <a href="#" class="btn btn-primary bg-danger border-danger">Remove</a>
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                        aria-expanded="true" aria-controls="collapseOne">
+                                        See Crew Matches
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    <h6>[name of person]</h6>
+                                    <p>[dates available: 00/00/00 - 00/00/00]</p>
+                                    <a href="#" class="btn btn-primary">Contact Them</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+            </div>
         </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/signup.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/signup.js"></script>
 </body>
 
 </html>
