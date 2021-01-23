@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
+  <title>Members Home Page</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -10,9 +10,72 @@
 </head>
 
 <body>
-    <h1>Home Page without Signin Time to make you sign in</h1>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/signup.js"></script>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Logo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+            <!-- <a class="nav-item nav-link" href="#">Your List</a>
+            <a class="nav-item nav-link" href="#">Update Contact</a> -->
+            <a class="nav-item nav-link" href="/login">Login</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+  <div class="row justify-content-center">
+      <h1>Welcome</h1>
+  </div>
+  <div class="row justify-content-center">
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+  </div>
+  <div class="row justify-content-center">
+      <div class="card text-center" style="width: 18rem;">
+          <img class="card-img-top"
+              src="https://www.history.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTU3ODc4NjAzNTM2MTQ4MTkx/hith-eiffel-tower-istock_000016468972large-2.jpg"
+              alt="Card image cap">
+          <div class="card-body">
+              <h5 class="card-title">[name of attraction]</h5>
+              <p class="card-text">[fill in description]</p>
+              <a href="#" class="btn btn-primary">Add to List</a>
+              <a href="#" class="btn btn-primary bg-danger border-danger">Not Interested</a>
+
+          </div>
+      </div>
+      <div class="card text-center" style="width: 18rem;">
+        <img class="card-img-top"
+            src="https://www.history.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTU3ODc4NjAzNTM2MTQ4MTkx/hith-eiffel-tower-istock_000016468972large-2.jpg"
+            alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">[name of attraction]</h5>
+            <p class="card-text">[fill in description]</p>
+            <a href="#" class="btn btn-primary">Add to List</a>
+            <a href="#" class="btn btn-primary bg-danger border-danger">Not Interested</a>
+
+        </div>
+    </div>
+    <div class="card text-center" style="width: 18rem;">
+      <img class="card-img-top"
+          src="https://www.history.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTU3ODc4NjAzNTM2MTQ4MTkx/hith-eiffel-tower-istock_000016468972large-2.jpg"
+          alt="Card image cap">
+      <div class="card-body">
+          <h5 class="card-title">[name of attraction]</h5>
+          <p class="card-text">[fill in description]</p>
+          <a href="#" class="btn btn-primary">Add to List</a>
+          <a href="#" class="btn btn-primary bg-danger border-danger">Not Interested</a>
+
+      </div>
+  </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/members.js"></script>
 
 </body>
 
