@@ -12,10 +12,22 @@ h2, h1 {
 }
 
 h1 {
-  color: #8ac418;
+  color: #adf906;
   margin-top: 10px;
   letter-spacing: 10px;
   font-size: 70px;
+}
+
+p{
+  color: #ffffff;
+}
+
+h6 {
+  color: #ffffff;
+}
+
+label {
+  color: #ffffff;
 }
 
 .ghosts {
