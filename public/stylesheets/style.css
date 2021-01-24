@@ -2,3 +2,11 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+body{
+  background-color: #34382f
+}
+
+h2 {
+  font-family: 'Creepster', cursive;
+}
