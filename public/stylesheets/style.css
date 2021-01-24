@@ -7,6 +7,18 @@ body{
   background-color: #34382f
 }
 
-h2 {
+h2, h1 {
   font-family: 'Creepster', cursive;
+}
+
+h1 {
+  color: #8ac418;
+  margin-top: 10px;
+  letter-spacing: 10px;
+  font-size: 70px;
+}
+
+.ghosts {
+  width: 100px;
+  margin-bottom: 30px;
 }
