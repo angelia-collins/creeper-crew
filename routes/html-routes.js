@@ -26,4 +26,25 @@ module.exports = function(app) {
   app.get("/members", isAuthenticated, (req, res) => {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
+
+
+  //trying to render contact page
+  app.get("/contact", isAuthenticated, (req, res) => {
+    // db.Donor.findAll({raw: true}).then(data =>{
+    //   console.log(data);
+      res.render('contact',{
+        layout: "main"
+      });
+    });
+  // });
+
+    //trying to render list page
+    app.get("/list", isAuthenticated, (req, res) => {
+      // db.Donor.findAll({raw: true}).then(data =>{
+      //   console.log(data);
+        res.render('list',{
+          layout: "main"
+        });
+      });
+    // });
 };
