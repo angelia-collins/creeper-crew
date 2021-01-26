@@ -17,7 +17,7 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
     },
     // dateEntered: {
-    //   type: DataTypes.RANGE(Sequelize.DATEONLY),
+    //   type: DataTypes.RANGE(DataTypes.DATEONLY),
     //   allowNull: true,
     // }
 
