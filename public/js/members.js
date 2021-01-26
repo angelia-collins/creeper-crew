@@ -5,10 +5,12 @@ $(document).ready(() => {
     $(".member-name").text(data.email);
   });
 
-  loginForm.on("submit", event => {
+  const searchBtn = $(".searchBtn");
+
+  searchBtn.on("submit", event => {
     event.preventDefault();
-    const search = $(".searchAttractions");
-    let userSearched = search.val().trim();
-    console.log(userSearched);
+    const search = $(".searchAttractions").val().trim();
+    // let userSearched = search.val().trim();
+    console.log(search);
   });
 });
