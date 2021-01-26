@@ -30,12 +30,11 @@ module.exports = function(app) {
 
   //trying to render contact page
   app.get("/contact", isAuthenticated, (req, res) => {
-    db.findAll({raw: true}).then(data =>{
-    //   console.log(data);
-      res.render('contact',{
-        layout: "main"
-      });
-    });
+    res.sendFile(path.join(__dirname, "../public/views/contact.handlebars"));
+      // res.render('contact',{
+      //   layout: "main"
+      // });
+
   });
 
     //trying to render list page
