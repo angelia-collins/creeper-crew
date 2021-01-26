@@ -30,21 +30,21 @@ module.exports = function(app) {
 
   //trying to render contact page
   app.get("/contact", isAuthenticated, (req, res) => {
-    // db.Donor.findAll({raw: true}).then(data =>{
+    db.findAll({raw: true}).then(data =>{
     //   console.log(data);
       res.render('contact',{
         layout: "main"
       });
     });
-  // });
+  });
 
     //trying to render list page
     app.get("/list", isAuthenticated, (req, res) => {
-      // db.Donor.findAll({raw: true}).then(data =>{
+      db.findAll({raw: true}).then(data =>{
       //   console.log(data);
         res.render('list',{
           layout: "main"
         });
       });
-    // });
+    });
 };
