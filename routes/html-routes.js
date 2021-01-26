@@ -32,18 +32,12 @@ module.exports = function(app) {
   app.get("/contact", isAuthenticated, (req, res) => {
     // res.sendFile(path.join(__dirname, "../public/views/contact.handlebars"));
     res.render('contact', {title: 'Express'});
-
       });
 
   // };
 
-    //trying to render list page
-    app.get("/list", isAuthenticated, (req, res) => {
-      db.findAll({raw: true}).then(data =>{
-      //   console.log(data);
-        res.render('list',{
-          layout: "main"
-        });
+  app.get("/list", isAuthenticated, (req, res) => {
+    // res.sendFile(path.join(__dirname, "../public/views/contact.handlebars"));
+    res.render('list', {title: 'Express'});
       });
-    });
 };
