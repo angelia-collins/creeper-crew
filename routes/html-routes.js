@@ -30,9 +30,9 @@ module.exports = function(app) {
 
   //trying to render contact page
   app.get("/contact", isAuthenticated, (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/views/contact.handlebars"));
-      res.render('contact',{
-        layout: "main"
+    // res.sendFile(path.join(__dirname, "../public/views/contact.handlebars"));
+      res.render('contact.handlebars',{
+        layout: "main.handlebars"
       });
 
   });
