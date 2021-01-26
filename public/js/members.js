@@ -4,4 +4,11 @@ $(document).ready(() => {
   $.get("/api/user_data").then(data => {
     $(".member-name").text(data.email);
   });
+
+  loginForm.on("submit", event => {
+    event.preventDefault();
+    const search = $(".searchAttractions");
+    let userSearched = search.val().trim();
+    console.log(userSearched);
+  });
 });
