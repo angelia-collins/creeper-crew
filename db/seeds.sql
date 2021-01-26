@@ -1,11 +1,11 @@
-INSERT INTO contact_info (first_name, last_name, email, phone_number) 
- VALUES ('Rosanna', 'Guiles', RosGui11@gmail.com, (682) 515-8888);
+INSERT INTO user (first_name, last_name, email, user_password) 
+ VALUES ('Rosanna', 'Guiles', 'RosGui11@gmail.com', 'Rockstar!04'),
+        ('Harry', 'Potter', 'Hogwarts231@gmail.com', 'LoveWeasley4eve'),
+        ('Peter', 'Parker', 'Spideyrox!@outlook.com', 'Saving!Jane2'), 
+        ('Sam', 'Ladstack', 'SammyL@gmail.com', 'P@sswork11');
 
-INSERT INTO contact_info (first_name, last_name, email, phone_number) 
- VALUES ('Harry', 'Potter', Hogwarts231@gmail.com, (682) 233-7749);
+INSERT INTO attraction (attraction_name, address1, city, state, postalCode)
+ VALUES ();
 
-INSERT INTO contact_info (first_name, last_name, email, phone_number) 
- VALUES ('Peter', 'Parker', Spideyrox!@outlook.com, (817) 395-1147);
-
-INSERT INTO contact_info (first_name, last_name, email, phone_number) 
- VALUES ('Sam', 'Ladstack', SammyL@gmail.com, (214) 241-0013);
+INSERT INTO available (dateEntered)
+ VALUES ();
