@@ -16,10 +16,10 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    dateEntered: {
-      type: DataTypes.RANGE(DataTypes.DATEONLY),
-      allowNull: true,
-    }
+    // dateEntered: {
+    //   type: DataTypes.RANGE(Sequelize.DATEONLY),
+    //   allowNull: true,
+    // }
 
   });
   return Crew;
