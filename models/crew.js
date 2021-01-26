@@ -17,7 +17,7 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
     },
     dateEntered: {
-      type: DataTypes.STRING,
+      type: DataTypes.RANGE(DataTypes.DATEONLY),
       allowNull: true,
     }
 
