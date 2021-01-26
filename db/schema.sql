@@ -15,10 +15,6 @@ CREATE TABLE attraction
 (
   id int NOT NULL AUTO_INCREMENT,
   attraction_name VARCHAR(50) NOT NULL,
-  address1 VARCHAR(50) NOT NULL,
-  city VARCHAR(100) NOT NULL,
-  state CHAR(2) NOT NULL, 
-  postalCode VARCHAR(16) NOT NULL,
   PRIMARY KEY (id)
 );
 
