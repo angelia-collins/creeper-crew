@@ -1,7 +1,7 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
-const search = require("../scrape-atlas-obscura");
+const search = require("../utils/scrape-atlas-obscura");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -52,9 +52,14 @@ module.exports = function(app) {
     }
   });
 
-  app.get("/search", (req, res) => {
-res.json(search({country: "belgium"}))
-// console.log(search({country: "belgium"}))
+  app.get("/api/search/:country?/:city?/:state?", (req, res) => {
+    const country = req.params.country ? req.params.country : null;
+    const city = req.params.city ? req.params.city : null;
+    const state = req.params.state ? req.params.state : null;
+
+    search.getURL({ country, city, state }).then(({data}) => {
+      res.json(search.extractData(data))
+    }).catch(err => res.send(err))
   })
 
   
