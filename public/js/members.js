@@ -5,9 +5,7 @@ $(document).ready(() => {
     $(".member-name").text(data.email);
   });
 
-  const searchBtn = $(".searchBtn");
-
-  searchBtn.on("submit", event => {
+  $(".searchBtn").on("submit", event => {
     event.preventDefault();
     const search = $(".searchAttractions").val().trim();
     // let userSearched = search.val().trim();
