@@ -28,16 +28,14 @@ module.exports = function(app) {
   });
 
 
-  //trying to render contact page
+  //render contact page
   app.get("/contact", isAuthenticated, (req, res) => {
-    // res.sendFile(path.join(__dirname, "../public/views/contact.handlebars"));
     res.render('contact', {title: 'Express'});
       });
 
-  // };
 
+  //render list page
   app.get("/list", isAuthenticated, (req, res) => {
-    // res.sendFile(path.join(__dirname, "../public/views/contact.handlebars"));
     res.render('list', {title: 'Express'});
       });
 };
