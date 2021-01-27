@@ -5,9 +5,9 @@ $(document).ready(() => {
     $(".member-name").text(data.email);
   });
 
-  $(".searchAttractions").on("submit", event => {
+  $("form.searchAttractions").on("submit", event => {
     event.preventDefault();
-    const search = $("input.searchAttractions").val().trim();
+    const search = $("input#searchbar").val().trim();
     // let userSearched = search.val().trim();
     console.log(search);
   });
