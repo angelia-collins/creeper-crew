@@ -8,7 +8,9 @@ $(document).ready(() => {
   $("form.searchAttractions").on("submit", event => {
     event.preventDefault();
     const search = $("input#searchbar").val().trim();
-    // let userSearched = search.val().trim();
-    console.log(search);
+    
+    scrape(search);
   });
 });
+
+
