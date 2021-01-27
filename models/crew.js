@@ -16,11 +16,14 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // dateEntered: {
-    //   type: DataTypes.RANGE(DataTypes.DATEONLY),
-    //   allowNull: true,
-    // }
-
+    startDate: {
+      type: DataTypes.DATEONLY,
+      allowNull: true,
+    },
+    endDate: {
+      type: DataTypes.DATEONLY,
+      allowNull: true,
+    }
   });
   return Crew;
 };
