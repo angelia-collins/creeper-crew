@@ -57,15 +57,15 @@ $(document).ready(() => {
       </div>
       <div class="modal-body">
         <p>Which days would you like to visit? (This will provide you better matches.)</p>
-        <p>Start:</p>
-        <form action="/action_page.php">
-        <label for="birthday">Birthday:</label>
-        <input type="date" id="birthday" name="birthday">
-      </form>
-<p>End:</p>
-<form action="/action_page.php">
-  <label for="birthday">Birthday:</label>
-  <input type="date" id="birthday" name="birthday">
+    <form id="locationDates">
+    <input type="hidden" id="location' name="location" value=${data[i].location}" />
+    <input type="hidden" id="attraction' name="attraction" value=${data[i].name}" />
+
+        <label for="startDate">Start:</label>
+        <input type="date" id="startDate" name="startDate">
+
+  <label for="endDate">End:</label>
+  <input type="date" id="endDate" name="endDate">
 </form>
 <div class="custom-control custom-checkbox">
   <input type="checkbox" class="custom-control-input" id="customCheck1">

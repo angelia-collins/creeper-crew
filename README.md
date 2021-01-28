@@ -17,13 +17,13 @@ https://smudalfsfpt0920.slack.com/files/U01AFPQJCQP/F01L5E7JYR1/team_teal.pptx
 # Contributors:
 
 ## Angelia Collins
-    – Front End: Logo, Wireframes, HTML/CSS, API , Bootstrap, CSS, Troubleshooting 
+    – Front End: Logo, Wireframes, Handlebars, CSS, API , Bootstrap, CSS, Troubleshooting 
 
 ## Karen Acosta
     – Database, PowerPoint Presentation, Troubleshooting 
 
 ## Michael Mejia
-    – Server creation, README, Troubleshooting
+    – README, Troubleshooting
 
 
 ## Technologies
