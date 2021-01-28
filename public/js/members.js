@@ -10,13 +10,10 @@ $(document).ready(() => {
 
 
   $(document).on('show.bs.modal','#exampleModalCenter', function (event) {
-    console.log('hi');
-    console.log(event);
-    console.log(event.relatedTarget);
     let placename = $(event.relatedTarget).data('placename'); 
     console.log(placename);
-        // $(this).find('.modal-body input').val(placename)
-        $(this).find('exampleModalLongTitle').val(placename)
+        $(this).find('.modal-title').text("You are adding " + placename + " to you list.");
+        console.log($(this).find('.modal-title'));
         
   })
 
@@ -31,12 +28,7 @@ $(document).ready(() => {
     }).then(data => {
       console.log(data)
 
-      //triggered when modal is about to be shown
-      // $('#exampleModalCenter').on('show.bs.modal', function (event) {
-      //   console.log("howdy");
-      //   let bookId = $(event.relatedTarget).data('bookid'); 
-      //   $(this).find('.modal-body input').val(bookId)
-      // });
+
 
       for (var i = 0; i < data.length; i++) {
 
