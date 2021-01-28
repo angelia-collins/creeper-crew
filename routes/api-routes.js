@@ -3,7 +3,7 @@ const db = require("../models");
 const passport = require("../config/passport");
 const search = require("../utils/scrape-atlas-obscura");
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
@@ -57,10 +57,54 @@ module.exports = function(app) {
     const city = req.params.city ? req.params.city : null;
     const state = req.params.state ? req.params.state : null;
 
-    search.getURL({ country, city, state }).then(({data}) => {
+    search.getURL({ country, city, state }).then(({ data }) => {
       res.json(search.extractData(data))
     }).catch(err => res.send(err))
-  })
+  });
 
-  
+  app.post("/api/wannago", (req, res) => {
+    let ourUser = db.User.findOne({
+      where: {
+        email: req.body.email,
+      }
+    });
+
+    let ourAttraction = db.Attraction.findOrCreate({
+      where: {
+        email: req.body.email,
+        name: req.body.attraction
+      }
+    });
+    Promise.all([ourUser, ourAttraction]).then(results => {
+
+      let user = results[0].getDataValue("id");
+      let attraction = results[1][0].getDataValue('id');
+
+      let ourWannaGo = db.WannaGo.findOrCreate({
+        where: {
+          UserId: user,
+          attractionId: attraction
+        }
+      }).then(results => {
+        let wannaGo = results[0];
+
+
+        let today = new Date();
+        let todayString = `${today.getFullYear()}-$${today.getMonth() + 1}-${today.getDate()}`;
+
+        if (req.body.startDate.length == 0)
+          req.body.startDate = todayString;
+        if (req.body.endDate.length == 0)
+          req.body.endDate = todayString;
+
+
+        wannaGo.set('idk', req.body.idk === 'on' ? 1 : 0);
+        wannaGo.set('startDate', req.body.startDate);
+        wannaGo.set('endDate', req.body.endDate);
+        wannaGo.save();
+      })
+    });
+  });
+  // });
+
 };

@@ -26,7 +26,9 @@ $(document).ready(() => {
       map[obj.name] = obj.value;
       return map;
     }, {});
-console.log(formValues);
+ formValues["email"] = memberEmail;
+ console.log(formValues);
+ $.post('/api/wannago', formValues);
   });
 
   $("form.searchAttractions").on("submit", event => {

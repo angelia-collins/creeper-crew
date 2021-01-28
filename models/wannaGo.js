@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => sequelize.define("WannaGo", {
     idk: {
       type: DataTypes.BOOLEAN,
-      allowNull: false
+    //   allowNull: false
     },
     startDate: {
       type: DataTypes.DATE,
