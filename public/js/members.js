@@ -67,10 +67,14 @@ $(document).ready(() => {
   <label for="birthday">Birthday:</label>
   <input type="date" id="birthday" name="birthday">
 </form>
+<div class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input" id="customCheck1">
+  <label class="custom-control-label" for="customCheck1">I don't know yet/Am available whenever.</label>
+</div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary">Add to List</button>
       </div>
     </div>
   </div>
