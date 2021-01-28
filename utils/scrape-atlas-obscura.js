@@ -24,13 +24,13 @@ function extractData(data) {
   ) {
     const location = $(element)
       .find("div.Card__hat.--place")
-      .text();
+      .text().trim();
     const name = $(element)
       .find("h3.Card__heading.--content-card-v2-title")
-      .text();
+      .text().trim();
     const description = $(element)
       .find("div.Card__content.js-subtitle-content")
-      .text();
+      .text().trim();
     const image = $(element)
       .find("img")
       .attr("data-src");
