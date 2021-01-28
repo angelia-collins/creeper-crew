@@ -6,13 +6,13 @@ $(document).ready(() => {
     $(".member-name").text(data.email);
   });
 
-
+  // db.sequelize.query("INSERT INTO social_urls (artist_id,urls,type) VALUES('" + artistId + "','" + videoURL + "','" + type + "')'", function(err);
 
 
   $(document).on('show.bs.modal','#exampleModalCenter', function (event) {
     let placename = $(event.relatedTarget).data('placename'); 
     console.log(placename);
-        $(this).find('.modal-title').text("You are adding " + placename + " to you list.");
+        $(this).find('.modal-title').text("You are adding " + placename + " to your list.");
         console.log($(this).find('.modal-title'));
         
   })
@@ -69,7 +69,7 @@ $(document).ready(() => {
 </form>
 <div class="custom-control custom-checkbox">
   <input type="checkbox" class="custom-control-input" id="customCheck1">
-  <label class="custom-control-label" for="customCheck1">I don't know yet/Am available whenever.</label>
+  <label class="custom-control-label" for="customCheck1">I don't know yet or am available whenever.</label>
 </div>
       </div>
       <div class="modal-footer">

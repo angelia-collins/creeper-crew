@@ -11,6 +11,10 @@ h2, h1 {
   font-family: 'Creepster', cursive;
 }
 
+h2{
+  color: #4a5b20;
+}
+
 h1 {
   color: #adf906;
   margin-top: 10px;
@@ -23,11 +27,11 @@ p{
 }
 
 h6 {
-  color: #000000;
+  color: #4a5b20;
 }
 
 label {
-  color: #000000;
+  color: #4a5b20;
 }
 
 .ghosts {
