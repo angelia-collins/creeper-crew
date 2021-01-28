@@ -19,7 +19,13 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //adding handlebars
-app.engine("handlebars", exphbs({defaultLayout: "main"}));
+// app.engine("handlebars", exphbs({defaultLayout: "main"}));
+app.engine("handlebars", exphbs({
+  defaultLayout: "main",
+  layoutsDir: __dirname + '/views/layouts/',
+  partialsDir: __dirname + '/views/partials/'
+
+}));
 app.set("view engine", "handlebars"); 
 
 // We need to use sessions to keep track of our user's login status
@@ -28,6 +34,8 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use(express.static(__dirname + 'public/'));
 
 // Requiring our routes
 require("./routes/html-routes.js")(app);
