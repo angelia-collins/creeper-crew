@@ -9,19 +9,15 @@ Creeper-Crew allows the user with a few clicks to not only find and research a c
 See Powerpoint Presentation for application overview: 
 https://smudalfsfpt0920.slack.com/files/U01AFPQJCQP/F01L5E7JYR1/team_teal.pptx
 
-# Application Capabilities :
+# What It Looks Like :
 1) 
 2) 
 3) 
-3) 
-4) 
-5) 
-6) 
 
 # Contributors:
 
 ## Angelia Collins
-    – Front End: Logo, Design mock up, html/css, API , backgrounds, Bootstrap, CSS, Troubleshooting 
+    – Front End: Logo, Wireframes, HTML/CSS, API , Bootstrap, CSS, Troubleshooting 
 
 ## Karen Acosta
     – Database, PowerPoint Presentation, Troubleshooting 
@@ -41,8 +37,7 @@ https://smudalfsfpt0920.slack.com/files/U01AFPQJCQP/F01L5E7JYR1/team_teal.pptx
 • Heroku
 • MySQL
 • Express / Node JS
-• NPM fs, dotenv, path, mysql, express, bcrypt, sequelize, body-parser, passport, passport-local,   express-session,  
-• Axios
+• NPM fs, dotenv, path, mysql, express, bcrypt, sequelize, body-parser, passport, passport-local, express-session, Axios
 
 ## Things to improve upon in future
 • Photo capabilities for profile pics
