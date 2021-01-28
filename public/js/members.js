@@ -16,7 +16,7 @@ $(document).ready(() => {
     let placename = $(event.relatedTarget).data('placename'); 
     console.log(placename);
         // $(this).find('.modal-body input').val(placename)
-        $(this).find('#exampleModalLongTitle').val(placename)
+        $(this).find('exampleModalLongTitle').val(placename)
         
   })
 
@@ -58,7 +58,7 @@ $(document).ready(() => {
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">You are adding ${$(data-placename)} to your list.</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">You are adding ${data[i].name} to your list.</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
