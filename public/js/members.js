@@ -20,8 +20,8 @@ $(document).ready(() => {
   $("form.searchAttractions").on("submit", event => {
     event.preventDefault();
     const search = $("input#searchbar").val().trim();
-
-    console.log(search);
+    $('.places').empty();
+    // console.log(search);
     $.ajax({
       method: "GET",
       url: "/api/search/" + search
