@@ -2,6 +2,7 @@
 const db = require("../models");
 const passport = require("../config/passport");
 const search = require("../utils/scrape-atlas-obscura");
+// const { in } = require("sequelize/types/lib/operators");
 
 module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -62,49 +63,74 @@ module.exports = function (app) {
     }).catch(err => res.send(err))
   });
 
-  app.post("/api/wannago", (req, res) => {
+  app.post("/api/list", (req, res) => {
     let ourUser = db.User.findOne({
       where: {
-        email: req.body.email,
+        password: req.body.password
       }
-    });
+    }).then(results => {
+      let user = results[0].getDataValue('id');
 
-    let ourAttraction = db.Attraction.findOrCreate({
-      where: {
-        email: req.body.email,
-        name: req.body.attraction
-      }
-    });
-    Promise.all([ourUser, ourAttraction]).then(results => {
-
-      let user = results[0].getDataValue("id");
-      let attraction = results[1][0].getDataValue('id');
-
-      let ourWannaGo = db.WannaGo.findOrCreate({
+      let ourWannaGos = db.WannaGo.findAll({
         where: {
-          UserId: user,
-          attractionId: attraction
+          UserId: user
         }
-      }).then(results => {
-        let wannaGo = results[0];
+      }).then(wannaGoResults => {
 
+        let wannaGoRow = wannaGoResults.reduce((map, obj) => {
+          let internalMap = {};
+          internalMap['idk'] = obj.getDataValue('idk');
+          internalMap['startDate'] = obj.getDataValue('startDate');
+          internalMap['endDate'] = obj.getDataValue('endDate');
 
-        let today = new Date();
-        let todayString = `${today.getFullYear()}-$${today.getMonth() + 1}-${today.getDate()}`;
-
-        if (req.body.startDate.length == 0)
-          req.body.startDate = todayString;
-        if (req.body.endDate.length == 0)
-          req.body.endDate = todayString;
-
-
-        wannaGo.set('idk', req.body.idk === 'on' ? 1 : 0);
-        wannaGo.set('startDate', req.body.startDate);
-        wannaGo.set('endDate', req.body.endDate);
-        wannaGo.save();
+          map[obj.getDataValue('id')] = internalMap;
+          return map;
+        }, {});
       })
     });
+
+  // app.post("/api/wannago", (req, res) => {
+  //   let ourUser = db.User.findOne({
+  //     where: {
+  //       email: req.body.email,
+  //     }
+  //   });
+
+  //   let ourAttraction = db.Attraction.findOrCreate({
+  //     where: {
+  //       email: req.body.email,
+  //       name: req.body.attraction
+  //     }
+  //   });
+  //   Promise.all([ourUser, ourAttraction]).then(results => {
+
+  //     let user = results[0].getDataValue("id");
+  //     let attraction = results[1][0].getDataValue('id');
+
+  //     let ourWannaGo = db.WannaGo.findOrCreate({
+  //       where: {
+  //         UserId: user,
+  //         attractionId: attraction
+  //       }
+  //     }).then(results => {
+  //       let wannaGo = results[0];
+
+
+  //       let today = new Date();
+  //       let todayString = `${today.getFullYear()}-$${today.getMonth() + 1}-${today.getDate()}`;
+
+  //       if (req.body.startDate.length == 0)
+  //         req.body.startDate = todayString;
+  //       if (req.body.endDate.length == 0)
+  //         req.body.endDate = todayString;
+
+
+  //       wannaGo.set('idk', req.body.idk === 'on' ? 1 : 0);
+  //       wannaGo.set('startDate', req.body.startDate);
+  //       wannaGo.set('endDate', req.body.endDate);
+  //       wannaGo.save();
+  //     })
+    // });
   });
-  // });
 
 };
