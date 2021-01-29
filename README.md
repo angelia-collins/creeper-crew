@@ -10,9 +10,9 @@ See Powerpoint Presentation for application overview:
 https://smudalfsfpt0920.slack.com/files/U01AFPQJCQP/F01L5E7JYR1/team_teal.pptx
 
 # What It Looks Like :
-1) 
-2) 
-3) 
+1) ![Screenshot (23)](https://user-images.githubusercontent.com/71719344/106212726-cef0bb00-6190-11eb-9113-0c542a044d17.png) 
+2) ![Screenshot (26)](https://user-images.githubusercontent.com/71719344/106212885-2c850780-6191-11eb-8da6-717769d28d87.png) 
+3) ![Screenshot (29)](https://user-images.githubusercontent.com/71719344/106212897-3149bb80-6191-11eb-8976-a01e2d9af560.png)
 
 # Contributors:
 
